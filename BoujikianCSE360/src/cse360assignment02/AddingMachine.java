@@ -5,6 +5,7 @@ public class AddingMachine {
 	 * total variable
 	 */
 	 private int total;
+	 private String track = "0";
 	  
 	 /**
 	  * adding method that sets total
@@ -18,7 +19,7 @@ public class AddingMachine {
 	   * @return a zero
 	   */
 	  public int getTotal () {
-	    return 0;
+	    return total;
 	  }
 	  
 	  /**
@@ -26,6 +27,8 @@ public class AddingMachine {
 	   * @param value
 	   */
 	  public void add (int value) {
+		  total += value;
+		  track += " + " + value;
 	  }
 
 	  /**
@@ -33,6 +36,8 @@ public class AddingMachine {
 	   * @param value
 	   */
 	  public void subtract (int value) {
+		  total = total - value;
+		  track += " - " + value;
 	  }
 
 	  /**
@@ -40,13 +45,15 @@ public class AddingMachine {
 	   * @return empty string
 	   */
 	  public String toString () {
-	    return "";
+	    return track;
 	  }
 
 	  /**
 	   * clear function
 	   */
 	  public void clear() {
+		  total = 0;
+		  track = "";
 	  }
 
 }
